@@ -1,111 +1,56 @@
-# Avaliação de Desenvolvedor - App Tabela Periódica
+# PROJETO PERIODIC TABLE
 
-Olá, logo começaremos os trabalhos! Mas primeiro um comentário importante. Você encontrará uma lista de tarefas logo abaixo. Não é necessário realizar todas, mas quanto mais avançar melhor para sua avaliação.
+![technologies](https://github.com/andrePereira11/machine_rental/blob/master/Neon%20Strings%20Design%20Studio.png)
 
-Durante as 48h da avaliação, você poderá fazer perguntas para esclarecer dúvidas que tenha. Mas tente ler todo o texto, pois nele contém algumas informações bem importantes pra realização da mesma.
+## PROBLEMA
 
-Este pacote contém uma aplicação RubyOnRails funcional. Você não precisará criar um app do zero. Somente precisamos que você faça algumas melhorias nele.
+Montar uma tabela periodica a partir do json dado.
 
-## Como se localizar na aplicação?
-
-Caso você não seja familiarizado com o RubyOnRails, os arquivos importantes para realizar as tarefas abaixo são:
-
-* config/routes.rb: arquivos que registram as rotas para visualização da tabela
-* app/controllers/table_controller.rb: controller para onde router direciona a requisição do navegador
-* app/views/table: pasta que contém o html da tabela
-* db/data.json: os dados puros da tabela que você precisa para montá-la
-
-O arquivo `db/data.json` possui uma série de dados sobre cada elemento da tabela, porém somente alguns são relevantes para essa avaliação.
-
-Para montar um elemento corretamente na tabela, você precisará dos campos abaixo:
-
-* name: Nome do elemento
-* atomic_mass: Massa atômica
-* number: Número atômico
-* period: Período da tabela onde aparece o elmento
-* category: Categoria/família do elemento
-* symbol: Símbolo do elemento
-* xpos: Posição no eixo x da tabela
-* ypos: Posição no eixo y da tabela
-
-Se você precisar de uma inspiração, existe essa tabela online https://ptable.com.
-
-A aplicação possui um código inicial que já possibilita o carregamento dos dados para montar a tabela.
-
-## Lista de tarefas
-
+### TAREFAS
 Você precisa implementar as melhorias abaixo:
 
-- Implemente a visualização da tabela conforme o link informado acima;
+[x] Implemente a visualização da tabela conforme o link https://ptable.com
 [x] Insira em cada componente da tabela os dados `name`, `atomic_mass`, `number` e `symbol` conforme a tabela do link;
 [x] Precisamos que você atribua uma cor para cada elemento, conforme sua categoria/família;
-- Ao clicar num elemento, o site deve navegar para uma nova página que contém somente o elemento clicado;
+[x] Ao clicar num elemento, o site deve navegar para uma nova página que contém somente o elemento clicado;
 - Exiba na página do elemento uma versão aumentada do mesmo, e inclua informação de níveis de energia `shells` do json.
-- Também na página do elemento monte uma tabela completa com os dados extras do json.
+[x] Também na página do elemento monte uma tabela completa com os dados extras do json.
 
-## Como rodar a aplicação
+## ETAPAS PARA RESOLUÇÃO DO PROBLEMA
 
-Para desenvolvimento das atividades da avaliação, recomendamos o uso do https://www.gitpod.io. Nele você poderá desenvolver e rodar a aplicação, com um ambiente muito baseado no Visual Studio Code, diretamente no navegador, sem a necessidade de instalação de dependências em sua máquina.
+- [x]  Criar projeto
+- [x]  Iniciar Git e dar primeiro commit
+- [x]  Colocar as etapas para a concretização do projeto no Read.me
+- [x]  Configurações Iniciais (rspec)
+- [x]  Criar repositorio GitHub e subir projeto
+- [x]  Entender projeto inicial
+- [x]  Criar link para a tabela principal
+- [x]  mostrar os elementos com section
+- [x]  Configurar o css da tabela
+- [x]  Fazer cada elemento ter um link para ele em específico (table#show)
+- [x]  Configurar pagina show com todos os detalhes daquele elemento
+- []  Aparencia da tabela principal ser identica a tabela periodica
+- []  Melhorar a visualização da pagina com apenas o elemento e seus dados
 
-Esta aplicação foi testada neste ambiente, para garantir que você tenha máximo foco na avaliação e não nas preliminares do desenvolvimento.
+- Melhorias
+  *  Melhorar o design dos botões
+  *  Melhorar na página de visualização principal
+  *  Implementar testes unitários
+  *  Criar teste BDD com capybara 
+  *  Fazer testes BDD passarem
+  *  Conforme passar o mouse pelos itens abaixo da tabela, apenas os elementos daquela categoria ficam em destaque na tabela
+  *  Fazer deploy da aplicação no Heroku ou Vercel. Para a finalidade de teste imediato
 
-No entanto, se você já possui um ambiente de desenvolvimento RubyOnRails, pode utilizá-lo, sem problemas.
+- Problemas a serem resolvidos:
 
-Seguindo os passos abaixo, você conseguirá rodar sem problemas:
+ Infelizmente, não encontrei um tempo hábil para terminar o design conforme eu desejava. Os Lanthanoids e os Actinoids não estão no local devido
+ 
+ Vejo que a visualização da tabela principal deveria ser feita exclusivamente com CSS vendo linha a linha e obtendo os espaços de acordo com a linha. Pensando como se fosse um componente isolado. Porém nesse quesito, preciso ainda estudar mais. 
 
-- Crie o repositório no github;
-- Execute os comandos abaixo no terminal dentro da pasta do projeto
+ Porém, está funcional, cumprindo seus objetivos de dar segurança e de que tudo funciona como deveria funcionar.
 
-```bash
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M master
-```
+ 
 
-- O comando abaixo precisa do endereço do seu repositório no Github.
 
-```bash
-git remote add origin https://github.com/SEU_USUARIO/periodic_table.git
-git push -u origin master
-```
 
-- Visite o https://gitpod.io e clique no link trynow
-- Coloque o endereço do respositório que você acabou de criar
 
-Ao avançar ele pedirá que faça login com sua conta do GitHub e pronto, seu ambiente ficará pronto depois de alguns minutos.
-
-Quando o ambiente estiver pronto, você presirá rodar os comandos:
-
-```bash
-bundle install
-yarn install
-```
-
-Para rodar a aplicação:
-
-```bash
-foreman start
-```
-
-## Dica importante
-
-O Gitpod pode não conseguir rotear a chamada para a aplicação. Quando isso acontecer ele informará uma linha semelhante a que apresento abaixo.
-
-```ruby
-config.hosts << "3000-c369a0f3-02ba-4978-b123-20fd29e6dd77.ws-eu03.gitpod.io"
-```
-
-Você precisará colocar essa linha de configuração no `config/application.rb`
-
-## Como devo entregar o código?
-
-Todo trabalho desenvolvido deve ser entregue através de um repositório público no https://github.com.
-
-E deve estar compatível com o ambiente do Gitpod, que é por onde faremos a avaliação do seu trabalho.
-
-## Boa sorte!
-
-Se tiver qualquer problema, entre em contato.
-
-Abraços.
