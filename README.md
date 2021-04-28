@@ -2,6 +2,19 @@
 
 ![technologies](https://github.com/andrePereira11/machine_rental/blob/master/Neon%20Strings%20Design%20Studio.png)
 
+## UTILIZAR
+- Clone o projeto;
+- Configure o projeto para baixar todas as dependencias do projeto
+- Subir o servidor
+- Acesse a aplicação no seu navegador
+
+```bash
+git clone https://github.com/andrePereira11/periodic_table.git
+bundle install
+rails server
+http://localhost:3000/table
+```
+
 ## PROBLEMA
 
 Montar uma tabela periodica a partir do json dado.
@@ -9,15 +22,16 @@ Montar uma tabela periodica a partir do json dado.
 ### TAREFAS
 Você precisa implementar as melhorias abaixo:
 
-[x] Implemente a visualização da tabela conforme o link https://ptable.com
-[x] Insira em cada componente da tabela os dados `name`, `atomic_mass`, `number` e `symbol` conforme a tabela do link;
-[x] Precisamos que você atribua uma cor para cada elemento, conforme sua categoria/família;
-[x] Ao clicar num elemento, o site deve navegar para uma nova página que contém somente o elemento clicado;
-- Exiba na página do elemento uma versão aumentada do mesmo, e inclua informação de níveis de energia `shells` do json.
-[x] Também na página do elemento monte uma tabela completa com os dados extras do json.
+- [x]  Implemente a visualização da tabela conforme o link https://ptable.com
+- [x]  Insira em cada componente da tabela os dados `name`, `atomic_mass`, `number` e `symbol` conforme a tabela do link;
+- [x]  Precisamos que você atribua uma cor para cada elemento, conforme sua categoria/família;
+- [x]  Ao clicar num elemento, o site deve navegar para uma nova página que contém somente o elemento clicado;
+- []   Exiba na página do elemento uma versão aumentada do mesmo, e inclua informação de níveis de energia `shells` do json.
+- [x]  Também na página do elemento monte uma tabela completa com os dados extras do json.
 
 ## ETAPAS PARA RESOLUÇÃO DO PROBLEMA
 
+- [x]  Fazer o update da maquina (ruby e rails)
 - [x]  Criar projeto
 - [x]  Iniciar Git e dar primeiro commit
 - [x]  Colocar as etapas para a concretização do projeto no Read.me
@@ -32,7 +46,7 @@ Você precisa implementar as melhorias abaixo:
 - []  Aparencia da tabela principal ser identica a tabela periodica
 - []  Melhorar a visualização da pagina com apenas o elemento e seus dados
 
-- Melhorias
+### Melhorias
   *  Melhorar o design dos botões
   *  Melhorar na página de visualização principal
   *  Implementar testes unitários
@@ -41,13 +55,13 @@ Você precisa implementar as melhorias abaixo:
   *  Conforme passar o mouse pelos itens abaixo da tabela, apenas os elementos daquela categoria ficam em destaque na tabela
   *  Fazer deploy da aplicação no Heroku ou Vercel. Para a finalidade de teste imediato
 
-- Problemas a serem resolvidos:
+### Problemas a serem resolvidos:
 
  Infelizmente, não encontrei um tempo hábil para terminar o design conforme eu desejava. Os Lanthanoids e os Actinoids não estão no local devido
  
  Vejo que a visualização da tabela principal deveria ser feita exclusivamente com CSS vendo linha a linha e obtendo os espaços de acordo com a linha. Pensando como se fosse um componente isolado. Porém nesse quesito, preciso ainda estudar mais. 
 
- Porém, está funcional, cumprindo seus objetivos de dar segurança e de que tudo funciona como deveria funcionar.
+ Todavia, está funcional e com um aspecto elegante em questão de design.
 
  
 
