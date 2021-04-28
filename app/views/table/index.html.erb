@@ -1,0 +1,46 @@
+
+<main>
+  <%= link_to 'Back', root_path %>
+  <div id="grid-container">
+    <% @elements["order"].each_with_index do |element, i| %>  
+    <%= link_to table_path(@elements[element]["name"].downcase) do %>
+      <section class="<%= @elements[element]["category"]%>">
+        <span><%= @elements[element]["number"] %></span>
+        <h2><%= @elements[element]["symbol"] %></h2>
+        <p><%= @elements[element]["name"] %></p>
+        <p><%= @elements[element]["atomic_mass"] %></p>
+      </section>
+    <% end %> 
+
+      <% if @breaks.include?(i) %>
+        <% iten = @breaks.index(i) %>
+        <section class="col-hidden col-span<%= @valueBreaks[iten] %>"></section>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <ul>
+      <li class="diatomic-nonmetal">Não Metais</li>
+      <li class="noble-gas">Gases Nobres</li>
+      <li class="metal-alcalino">Metais Alcalinos</li>
+      <li class="metal-alcalino-terroso">Metais Alcalino-Terrosos</li>
+      <li class="semimetal">Semimetais</li>
+      <li class="halogenio">Halogênios</li>
+      <li class="outros-metais">Outros Metais</li>
+      <li class="metal-transicao">Metais de Transição</li>
+      <li class="lantanideo">Lantanídeos</li>
+      <li class="actinidio">Actinídios</li>
+    </ul>
+  </footer>
+</main>
+
+
+
+
+
+
+
+
+
