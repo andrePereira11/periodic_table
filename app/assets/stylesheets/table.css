@@ -13,7 +13,7 @@ a:link {
 }
 	
 :root{
-	--bg-preto:rgb(0,0,0);
+	--bg-preto: #121214;
 	--nao-metal:rgb(180,210,100);
 	--gas-nobre:rgb(100,180,225);
 	--metal-alcalino:rgb(245,200,100);

@@ -1,4 +1,135 @@
-a.link{
-  font-size: 20px;
-  color: yellow;
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	box-sizing:border-box;	
+	
+}
+.link { 
+ text-decoration:none; 
+ font-size: 20px;
+ color: yellow;
+}
+	
+:root{
+	--bg-preto: #121214;
+	--nao-metal:rgb(180,210,100);
+	--gas-nobre:rgb(100,180,225);
+	--metal-alcalino:rgb(245,200,100);
+	--metal-alcalino-terroso:rgb(240,230,90);
+	--semimetal:rgb(110,200,190);
+	--halogenio:rgb(170,225,255);
+	--outros-metais:rgb(190,210,210);
+	--metal-transicao:rgb(245,175,175);
+	--lantanideo:rgb(150,225,225);
+	--actinidio:rgb(230,190,220);
+}
+
+body{
+	font:1em/1 'Montserrat', sans-serif;
+	color:rgb(255,255,255);
+	text-align:center;
+	padding:1em 5%;
+	background:var(--bg-preto);	
+}
+
+	
+/* FOREGROUND COLOR VARIABLES */
+.diatomic-nonmetal{
+	color:var(--nao-metal);
+}
+	
+.noble-gas{
+	color:var(--gas-nobre);
+}
+
+.alkali-metal{
+	color:var(--metal-alcalino);
+}
+	
+.alkaline-earth-metal{
+	color:var(--metal-alcalino-terroso);
+}
+	
+.metalloid{
+	color:var(--semimetal);
+}
+	
+.halogenio{
+	color:var(--halogenio);
+}
+	
+.post-transition-metal{
+	color:var(--outros-metais);
+}
+	
+.transition-metal{
+	color:var(--metal-transicao);
+}
+	
+.lanthanide{
+	color:var(--lantanideo);
+}
+	
+.actinide{
+	color:var(--actinidio);
+}
+
+	
+/* TYPOGRAPHY STYLES */
+h1{
+	margin:.5em 0;
+	font-size:calc(3vw + 2rem);
+	font-weight:100;
+	text-transform:uppercase;
+	letter-spacing:-.05em;
+}
+
+h2.element{
+	font-size:7em;
+}
+
+p.element{
+	font-size:3em;	
+}
+
+/* MAIN STYLES */
+.main{
+  display: flex;
+  width: 50%;
+  margin-top: 60px;
+}
+
+.block{
+  display: inline-block;
+  margin-left: 50px;
+  width: 45%;
+}
+
+/* GRID CELL */
+section{
+  height:100%;
+	background:var(--bg-preto);	
+	border:.125rem solid;
+	border-radius:.25rem;	
+	line-height:1.25;
+	margin-bottom:.5em;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+span.show{
+	font-size:3em;
+	position:absolute;
+	top:.3em;
+	left:.5em;	
+}
+
+
+/* TABLE */
+td{
+  text-align: left;
+  width: 50%;
 }

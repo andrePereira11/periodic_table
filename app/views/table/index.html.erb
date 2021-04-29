@@ -1,6 +1,11 @@
-
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<div class="container">
+  <div class="row justify-content-center">
+    <h1>Tabela Periódica</h1>
+  </div>
+</div>
 <main>
-  <%= link_to 'Back', root_path %>
+  <%= link_to 'Home', root_path, class:'link' %>
   <div id="grid-container">
     <% @elements["order"].each_with_index do |element, i| %>  
     <%= link_to table_path(@elements[element]["name"].downcase) do %>
@@ -24,14 +29,14 @@
     <ul>
       <li class="diatomic-nonmetal">Não Metais</li>
       <li class="noble-gas">Gases Nobres</li>
-      <li class="metal-alcalino">Metais Alcalinos</li>
-      <li class="metal-alcalino-terroso">Metais Alcalino-Terrosos</li>
-      <li class="semimetal">Semimetais</li>
+      <li class="alkali-metal">Metais Alcalinos</li>
+      <li class="alkaline-earth-metal">Metais Alcalino-Terrosos</li>
+      <li class="metalloid">Semimetais</li>
       <li class="halogenio">Halogênios</li>
-      <li class="outros-metais">Outros Metais</li>
-      <li class="metal-transicao">Metais de Transição</li>
-      <li class="lantanideo">Lantanídeos</li>
-      <li class="actinidio">Actinídios</li>
+      <li class="post-transition-metal">Outros Metais</li>
+      <li class="transition-metal">Metais de Transição</li>
+      <li class="lanthanide">Lantanídeos</li>
+      <li class="actinide">Actinídios</li>
     </ul>
   </footer>
 </main>

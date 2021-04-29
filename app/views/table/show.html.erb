@@ -1,34 +1,32 @@
-  <% stylesheet_link_tag "element", :media => "all" %>  
+<%= stylesheet_link_tag 'element', media: 'all', 'data-turbolinks-track' => true %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1><%= @element["name"] %></h1>
+    </div>
+  </div>
 
   <%= link_to 'Back', table_index_path, class:'link' %>
-    <ul>
-      <li><%= @element["number"] %></li>
-      <li><%= @element["appearance"] %></li>
-      <li><%= @element["atomic_mass"] %></li>
-      <li><%= @element["boil"] %></li>
-      <li><%= @element["category"] %></li>
-      <li><%= @element["color"] %></li>
-      <li><%= @element["density"] %></li>
-      <li><%= @element["discovered_by"] %></li>
-      <li><%= @element["molar_heat"] %></li>
-      <li><%= @element["named_by"] %></li>
-      <li><%= @element["number"] %></li>
-      <li><%= @element["period"] %></li>
-      <li><%= @element["phase"] %></li>
-      <li><%= @element["source"] %></li>
-      <li><%= @element["spectral_img"] %></li>
-      <li><%= @element["summary"] %></li>
-      <li><%= @element["symbol"] %></li>
-      <li><%= @element["xpos"] %></li>
-      <li><%= @element["ypos"] %></li>
-      <li><%= @element["shells"] %></li>
-      <li><%= @element["electron_configuration"] %></li>
-      <li><%= @element["electron_configuration_semantic"] %></li>
-      <li><%= @element["electron_affinity"] %></li>
-      <li><%= @element["electronegativity_pauling"] %></li>
-      <li><%= @element["ionization_energies"] %></li>
 
-     
-     <h1><%= @element.size %></h1>
-     <p><%= @element %></p>
-    </ul>
+  <div class="main">
+    <div class="block">
+      <section class="<%= @element["category"]%>">
+        <span class="show"><%= @element["number"] %></span>
+        <h2 class="element"><%= @element["symbol"] %></h2>
+        <p class="element"><%= @element["name"] %></p>
+        <p class="element"><%= @element["atomic_mass"] %></p>
+      </section>
+    </div>
+
+    <div class="block">
+      <table>
+        <% @element.each do |key, value|%>
+          <tr>
+            <td><%= key %></td>
+            <td><%= value %></td>
+          </tr>
+        <% end %>
+      </table>
+
+      
+    </div>
+  </div>
